@@ -1,8 +1,16 @@
-new_user_data = {
-    "email": "change_user@yandex.ru",
-    "password": "password123",
-    "name": "ChangeUser"
-}
 
-updated_name = {"name": "UpdatedName"}
-updated_email = {"email": "updated_email@yandex.ru"}
+
+
+class DataForUserChange:
+
+    UPDATE_NAME = {"name": "NewName"}
+
+    UPDATE_EMAIL = {"email": "new_email666@yandex.ru"}
+
+    UPDATE_PASSWORD = {"password": "newpassword123"}
+
+    AUTH_USER = {
+        "email": "auth_user@yandex.ru",
+        "password": "password123",
+        "name": "AuthUser"
+    }

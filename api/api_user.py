@@ -13,6 +13,10 @@ class UserApi:
         """Логин пользователя в системе"""
         return self.client.post(Urls.LOGIN_USER, json=creds)
 
-    def delete_user(self, user_id):
-        """Удаление пользователя из системы"""
-        return self.client.delete(f"{Urls.DELETE_USER}/{user_id}")
+    def delete_user(self, access_token):
+        headers = {"authorization": f"{access_token}"}
+        return self.client.delete(Urls.REFRESH_DATA_USERS, headers=headers)
+
+    def patch_user(self, patch_data, token=None):
+        headers = {"authorization": f"Bearer {token}"} if token else {}
+        return self.client.patch(Urls.REFRESH_DATA_USERS, headers=headers, json=patch_data)

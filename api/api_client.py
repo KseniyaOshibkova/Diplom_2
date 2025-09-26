@@ -17,3 +17,6 @@ class ApiClient:
 
     def delete(self, path, **kwargs):
         return self.session.delete(self.base_url + path, **kwargs)
+
+    def patch(self, path, **kwargs):
+        return self.session.patch(self.base_url + path, **kwargs)
