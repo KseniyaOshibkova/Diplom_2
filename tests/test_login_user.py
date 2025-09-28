@@ -8,8 +8,8 @@ class TestLoginUser:
 
     @allure.title("Успешный логин под существующим пользователем")
     @allure.description("Проверяем, что пользователь может залогиниться с корректными email и паролем")
-    def test_login_valid_user(self, user_api, created_user):
-        user_data = created_user
+    def test_login_valid_user(self, user_api, created_existing_user):
+        user_data = created_existing_user
 
         with allure.step("Отправляем запрос на логин с валидными данными"):
             response = user_api.login_user({

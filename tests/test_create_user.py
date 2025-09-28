@@ -29,7 +29,7 @@ class TestCreateUser:
 
     @allure.title("Создание пользователя с уже зарегистрированным email")
     @allure.description("Проверяем, что сервер возвращает ошибку при попытке создать дубликат")
-    def test_create_existing_user(self, user_api, created_user):
+    def test_create_existing_user(self, user_api, created_existing_user):
         # Пользователь уже создан фикстурой
         with allure.step("Создаем пользователя с уже зарегистрированным email"):
             response = user_api.create_user(DataForUser.EXISTING_USER)

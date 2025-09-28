@@ -12,9 +12,6 @@ class ApiClient:
     def post(self, path, **kwargs):
         return self.session.post(self.base_url + path, **kwargs)
 
-    def put(self, path, **kwargs):
-        return self.session.put(self.base_url + path, **kwargs)
-
     def delete(self, path, **kwargs):
         return self.session.delete(self.base_url + path, **kwargs)
 
